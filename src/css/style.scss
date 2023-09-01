@@ -1,0 +1,560 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap');
+
+$white: #fff;
+$black: #000;
+$main-color: rgba(224, 123, 92, 1);
+$btn-border-color: rgba(255, 255, 255, 0.43);
+$cards-border-color: rgba(88, 28, 10, 1);
+$nav-bg-color: rgba(15, 15, 15, 0.24);
+
+$label-size: 14px;
+$text-size: 16px;
+$text-size-1: 18px;
+$text-size-2: 20px;
+$text-size-3: 24px;
+$title-size: 48px;
+$h1-size: 58px;
+$under-title-size: 28px;
+
+$text-weight: 700;
+$semi-bold: 600;
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body, html{
+    scroll-behavior: smooth;
+}
+
+p{
+    font-size: $text-size;
+    line-height: 1.4;
+}
+
+h1{
+    font-size: $h1-size;
+    font-weight: $text-weight;
+    color: $white;
+    font-style: italic;
+}
+
+label{
+    font-size: $label-size;
+    display: block;
+    color: $black;
+    font-style: italic;
+    font-weight: $semi-bold;
+    margin-left: 20px;
+}
+
+input[type="text"], input[type="password"], input[type="email"], input[type="date"], select{
+    height: 40px;
+    border-radius: 10px;
+    border: 2px solid rgba($color: $main-color, $alpha: 0.35);
+    padding: 0 20px;
+    box-sizing: border-box;
+    outline: none;
+    width: 100%;
+    max-width: 100%;
+    &::placeholder{
+        font-style: italic;
+        color: rgba($color: $main-color, $alpha: 0.25)
+    }
+}
+
+input[type="checkbox"]{
+    margin: 0;
+}
+
+select{
+    appearance: none;
+}
+
+textarea{
+    height: 100px;
+    border-radius: 10px;
+    border: 2px solid rgba($color: $main-color, $alpha: 0.35);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    outline: none;
+    width: 100%;
+    max-width: 100%;
+    resize: none;
+    &::placeholder{
+        font-style: italic;
+        color: rgba($color: $main-color, $alpha: 0.25)
+    }
+}
+
+button{
+    padding: 0 15px;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+}
+
+a{
+    text-decoration: none;
+    font-size: $text-size;
+}
+
+ul{
+    list-style: none;
+}
+
+header{
+    background: url(../img/main-bg.png) no-repeat top center;
+    background-size: cover;
+}
+
+section{
+    padding: 100px 0;
+}
+
+.btn{
+    height: 35px;
+    font-size: $text-size;
+    color: $white;
+    background: $main-color;
+    border-radius: 5px;
+}
+
+.btn-transparent{
+    background: transparent;
+    border: 2px solid $btn-border-color;
+}
+
+.container{
+    width: 1200px;
+    max-width: 100%;
+    margin: auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+nav{
+    background: $nav-bg-color;
+}
+
+nav .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 15px;
+}
+
+.navbar-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    ul{
+        display: flex;
+        align-items: center;
+        gap: inherit;
+        a{
+            color: $white;
+            font-size: $text-size;
+            transition: 0.3s;
+            &:hover{color: $main-color}
+        }
+    }
+    .nav-buttons{
+        display: flex;
+        align-items: center;
+        gap: inherit;
+    }
+}
+
+.block__group{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+main{
+    text-align: center;
+    padding: 100px 0;
+    p{
+        width: 595px;
+        max-width: 100%;
+        color: $white;
+        margin: auto;
+        font-size: $under-title-size;
+        opacity: 0.7;
+        font-style: italic;
+    }
+
+    .block__group a{
+        color: $main-color;
+        font-size: $text-size-1;
+    }
+    .block__group button{
+        font-weight: bold;
+        font-size: $text-size-2;
+        width: 225px;
+        height: 45px;
+    }
+}
+
+.about-us__wrapper{
+    text-align: center;
+    .title{
+        font-size: $title-size;
+        font-style: italic;
+        span{
+            font-size: $h1-size;
+            color: $main-color;
+            display: block;
+            font-weight: $text-weight;
+            font-style: normal;
+        }
+    }
+    p{
+        font-size: $under-title-size;
+        font-style: italic;
+        width: 595px;
+        max-width: 100%;
+        margin: auto;
+        color: $black;
+    }
+    .phrase{
+        font-size: $under-title-size;
+        font-weight: $text-weight;
+        color: $main-color
+    }
+}
+
+.title-section{
+    font-size: $title-size;
+    font-weight: $text-weight;
+    text-align: center;
+    font-style: italic;
+}
+
+.cards__container{
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    width: 710px;
+    max-width: 100%;
+    margin: auto;
+    flex-wrap: wrap;
+    margin-top: 65px;
+    .card__item{
+        width: 210px;
+        max-width: 100%;
+        border-radius: 10px;
+        color: $white;
+        border: 3px solid rgba(255, 255, 255, 0.16);
+        text-align: center;
+        padding: 30px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover, &.active{
+            background: $black;
+            border: 3px solid $black;
+            box-shadow: 4px 6px 32px -6px $cards-border-color;
+            a{color: $main-color}
+        }
+        .time{
+            font-size: $text-size-3;
+        }
+        .price{
+            font-style: italic;
+            font-size: $under-title-size;
+            font-weight: $text-weight;
+            span{
+                font-weight: normal;
+                font-size: $text-size-2;
+                display: block;
+            }
+        }
+        a{
+            color: $black;
+            font-weight: $text-weight;
+        }
+    }
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 11px;
+    &:last-child{
+        margin-bottom: 0;
+    }
+}
+
+form.registration{
+    width: 400px;
+    max-width: 100%;
+    margin: 65px auto 0;
+    button{
+        font-weight: $text-weight;
+        margin: 45px auto 0;
+        width: 150px;
+        height: 45px;
+    }
+}
+
+footer{
+    background: #000;
+    color: $white;
+    padding: 50px 0;
+    .copyright{
+        margin-top: 20px;
+        font-size: $text-size;
+    }
+    .footer-wrapper{
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+    }
+    .footer__nav{
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        min-width: 40%;
+        .footer-buttons, ul{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        ul a{
+            color: $white;
+            transition: 0.3s;
+            &:hover{
+                color: $main-color;
+            }
+        }
+    }
+}
+
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    z-index: 999;
+    background: rgba($color: $black, $alpha: 0.2);
+    &.center .popup{
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .popup{
+        position: absolute;
+        top: 3%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 450px;
+        max-width: 100%;
+        border-radius: 10px;
+        background: $white;
+        padding: 30px;
+        box-sizing: border-box;
+        .title-form{
+            font-size: $text-size-3;
+            font-weight: $text-weight;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        button.btn{
+            width: 100%;
+            margin: 15px auto 0;
+        }
+
+        button.close{
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            padding: 0;
+            img{
+                width: 100%;
+                max-width: 100%;
+                display: block;
+            }
+        }
+
+        p{
+            margin-top: 10px;
+            font-size: $label-size;
+            text-align: center;
+        }
+        a{
+            font-size: $label-size;
+            color: $main-color;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+
+    }
+}
+
+
+
+
+//thefts
+.offers-wrapper{
+    display: flex;
+    max-width: 100%;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+    .offer__item{
+        width: 30%;
+        padding: 30px;
+        border-radius: 10px;
+        box-sizing: border-box;
+        border: 3px solid rgba($color: $main-color, $alpha: 0.35);
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        p{
+            font-weight: $semi-bold;
+            span{
+                font-weight: normal;
+                display: block;
+            }
+        }
+    }
+}
+
+
+//theft
+.edit-ffers__container{
+    padding: 30px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    border: 3px solid rgba($color: $main-color, $alpha: 0.35);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    .checkbox{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        input{display: block;}
+    }
+    textarea{
+        margin-top: 5px;
+    }
+    p{
+        font-weight: $semi-bold;
+        span{
+            font-weight: normal;
+            display: block;
+        }
+        &.select{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            select{width: 200px;}
+        }
+    }
+}
+
+.officers p{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+
+.bg-orange .title-section{color: $white}
+
+.bg-w .title-section{color: $main-color}
+
+.g-60{
+    gap: 60px;
+}
+
+.bg-w{
+    background: $white;
+}
+
+.bg-orange{
+    background: $main-color;
+}
+
+@media screen and (max-width: 991px) {
+    nav .container, footer .footer-wrapper, footer .footer__nav{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .footer__item{text-align: center;}
+
+    .g-60{
+        gap: 40px;
+    }
+
+    form.registration{
+        margin-top: 40px;
+    }
+
+    form.registration button{
+        margin-top: 25px;
+    }
+
+    .offers-wrapper .offer__item{
+        width: 47%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .navbar-wrapper{display: none;}
+    .cards__container .card__item{
+        width: 46%;
+    }
+
+    h1, .about-us__wrapper .title span{
+        font-size: 36px;
+    }
+    
+    main p, .about-us__wrapper p, .about-us__wrapper .phrase{font-size: 19px;}
+
+    .title-section, .about-us__wrapper .title{font-size: 30px;}
+
+
+    .offers-wrapper .offer__item{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 560px){
+    .cards__container{
+        flex-direction: column;
+    }
+    .cards__container .card__item{width: 100%;}
+}
+
+@media screen and (max-width: 450px){
+    .title-section, .about-us__wrapper .title{font-size: 25px;}
+}
